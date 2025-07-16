@@ -1,6 +1,6 @@
 import maya.cmds as cmds
 
-def create_table(table_size_x, table_size_y, table_size_z):
+def create_table(table_size_x, table_size_y, table_size_z, leg_size_x, leg_size_y, leg_size_z, x_bias, z_bias):
     # Check a condition
     if not cmds.objExists('table'):
         # Make a Top
