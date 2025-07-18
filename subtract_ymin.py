@@ -2,6 +2,7 @@ import maya.cmds as cmds
 
 def subtract_ymin(*objs):
     for obj in objs:
+        # If obj is exists
         if cmds.objExists(obj):
             # Get a BBOX attribute
             bbox = cmds.exactWorldBoundingBox(obj)
