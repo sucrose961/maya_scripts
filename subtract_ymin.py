@@ -1,7 +1,9 @@
 import maya.cmds as cmds
 
-def subtract_ymin(*objs):
-    for obj in objs:
+def subtract_ymin():
+    selected_objs = cmds.ls(selection=True)
+    
+    for obj in selected_objs:
         # If obj is exists
         if cmds.objExists(obj):
             # Get a BBOX attribute
