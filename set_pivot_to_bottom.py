@@ -1,11 +1,13 @@
 import maya.cmds as cmds
 
-def set_pivot_to_bottom(*objs):
-    for obj in objs:
+def set_pivot_to_bottom():    
+    selected_objs = cmds.ls(selection=True)
+    
+    for obj in selected_objs:
         # If obj is exists
         if cmds.objExists(obj):
             # Get a BBOX attribute
-            bbox = cmds.exactWorldBoundingBox("R_Cube")
+            bbox = cmds.exactWorldBoundingBox(obj)
 
             # Calculate a x_center and a z_center
             x_center = (bbox[0] + bbox[3]) * 0.5
