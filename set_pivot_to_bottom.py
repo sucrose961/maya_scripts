@@ -1,3 +1,5 @@
+import maya.cmds as cmds
+
 def set_pivot_to_bottom(*objs):
     for obj in objs:
         # If obj is exists
