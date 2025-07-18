@@ -1,5 +1,6 @@
 def set_pivot_to_bottom(*objs):
     for obj in objs:
+        # If obj is exists
         if cmds.objExists(obj):
             # Get a BBOX attribute
             bbox = cmds.exactWorldBoundingBox("R_Cube")
