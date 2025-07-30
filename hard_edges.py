@@ -1,3 +1,6 @@
+import maya.cmds as cmds
+import maya.mel as mel
+
 def hard_edges(min_angle, max_angle):
     selected = cmds.ls(selection=True)    
 
